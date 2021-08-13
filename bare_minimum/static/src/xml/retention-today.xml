@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template xml:space="preserve">
+
+    <t t-name="retention-today">
+
+        <link type="text/css" rel="stylesheet" href="/bare_minimum/static/src/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="/bare_minimum/static/src/css/customView.css"/>
+        <script type="text/javascript" src="/bare_minimum/static/src/js/jquery_today.js"/>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+        <div class="body">
+
+            <div id="myModal" class="modal">
+              <!-- Modal content -->
+                <div class="modal-content" style="width: 40%; height:20%">
+                <span class="close">X</span>
+                    <h1 style="text-align:center;">New Transaction!</h1>
+                    <div class="pyro">
+                <div class="before"></div>
+                        <div class="after"></div>
+            </div>
+            </div>
+            </div>
+            <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-md-9">
+                    <div class="main-content">
+                        <div class="main-content-title">
+                            <h1>Retention - Today</h1>
+                        </div>
+                        <div class="content-block main-content-block">
+                            <div class="content-title">Our leaders</div>
+                            <div class="main-content-table">
+                                <table class="w-100">
+                                    <tr class="main-content-table-1">
+                                        <td>
+                                            <div class="main-content-table-icon"></div>
+                                        </td>
+                                        <td>
+                                            <div class="main-content-table-name"><span id="days_first_placer_name"></span>
+                                                <span id="days_first_placer_depo"></span>
+                                            </div>
+                                        </td>
+                                        <td class="w-100">
+                                            <div class="main-content-table-bar">
+                                                <div class="main-content-table-bar-percent"
+                                                     id="first_place_style"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="main-content-table-2">
+                                        <td>
+                                            <div class="main-content-table-icon"></div>
+                                        </td>
+                                        <td>
+                                            <div class="main-content-table-name"><span id="days_second_placer_name"></span>
+                                                <span id="days_second_placer_depo"></span>
+                                            </div>
+                                        </td>
+                                        <td class="w-100">
+                                            <div class="main-content-table-bar">
+                                                <div class="main-content-table-bar-percent"
+                                                     id="second_place_style"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="main-content-table-3">
+                                        <td>
+                                            <div class="main-content-table-icon"></div>
+                                        </td>
+                                        <td>
+                                            <div class="main-content-table-name"><span id="days_third_placer_name"></span>
+                                                <span id="days_third_placer_depo"></span>
+                                            </div>
+                                        </td>
+                                        <td class="w-100">
+                                            <div class="main-content-table-bar">
+                                                <div class="main-content-table-bar-percent"
+                                                     id="third_place_style"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="content-block main-content-block">
+                            <div class="content-title">Daily performance</div>
+
+
+                            <div>
+                                <canvas id="myChart" width="400" height="106"></canvas>
+                                <script>
+<!--                                var ctx = document.getElementById('myChart');-->
+                                    <!--                                var myChart = new Chart(ctx, {-->
+                                    <!--                                    type: 'bar',-->
+                                    <!--                                    data: {-->
+                                    <!--                                        labels: ['Orange', 'Red'],-->
+                                    <!--                                        datasets: [{-->
+                                    <!--                                            label: '# of Votes',-->
+                                    <!--                                            data: [12, 19, 3, 5, 2, 3, 20, 10, 14, 17, 12, 19, 3, 5, 2, 3, 30, 10, 14, 17],-->
+                                    <!--                                            backgroundColor: [-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA'-->
+                                    <!--                                            ],-->
+                                    <!--                                            borderColor: [-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA',-->
+                                    <!--                                                '#6B73CA'-->
+                                    <!--                                            ],-->
+                                    <!--                                            borderWidth: 1,-->
+                                    <!--                                            borderRadius: 200-->
+                                    <!--                                        }]-->
+                                    <!--                                    },-->
+                                    <!--                                    options: {-->
+                                    <!--                                        scales: {-->
+                                    <!--                                            y: {-->
+                                    <!--                                                beginAtZero: true-->
+                                    <!--                                            }-->
+                                    <!--                                        }-->
+                                    <!--                                    }-->
+                                    <!--                                });-->
+                                </script>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="left-content">
+                        <div class="left-content-deposit content-block content-block-blue">
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <div class="content-title-blue">Deposit progress</div>
+                                <div class="left-content-deposit-value" id="d_calc_id1">  68 638</div>
+                            </div>
+                            <div class="left-content-deposit-bar">
+                                <span class="left-content-deposit-bar-start-value">0</span>
+                                <div class="left-content-deposit-bar-container">
+                                    <div class="left-content-deposit-percent" id="days_style"></div>
+                                </div>
+                                <span class="left-content-deposit-bar-end-value">100k</span>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="left-content-block content-block">
+                        <div class="left-content-info">
+                            <div class="left-content-info-remaining-time d-flex align-items-center flex-wrap">
+                                <div class="left-content-info-icon"></div>
+                                <div class="left-content-info-text">
+                                    <div class="left-content-info-name">
+                                        Remaining time
+                                    </div>
+                                    <div class="left-content-info-value" id="remaining_time"></div>
+                                </div>
+                            </div>
+
+                            <div class="left-content-info-remain-to-goal d-flex align-items-center flex-wrap">
+                                <div class="left-content-info-icon"></div>
+                                <div class="left-content-info-text">
+                                    <div class="left-content-info-name" >
+                                        Remain to goal
+                                    </div>
+                                    <div class="left-content-info-value" id="remain_to_goal">
+                                        $ 211307
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="left-content-info-since-last-deposit d-flex align-items-center flex-wrap">
+                                <div class="left-content-info-icon"></div>
+                                <div class="left-content-info-text">
+                                    <div class="left-content-info-name">
+                                        Since last deposit
+                                    </div>
+                                    <div class="left-content-info-value">
+                                        <span id="hours">00:</span>
+                                        <span id="mins">00:</span>
+                                        <span id="seconds">00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="left-content-block content-block">
+                        <div class="content-title">Last deposits</div>
+                        <div class="left-content-last-deposit-table">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-name" id="last_1_name"></div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-value" id="last_1_amount"></div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-time" id="last_1_time"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-name" id="last_2_name"></div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-value" id="last_2_amount"></div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-time" id="last_2_time"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-name" id="last_3_name"></div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-value" id="last_3_amount"></div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-time" id="last_3_time"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-name" id="last_4_name"></div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-value" id="last_4_amount"></div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-time" id="last_4_time"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-name" id="last_5_name"></div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-value" id="last_5_amount"></div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-time" id="last_5_time"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-name" id="last_6_name"></div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-value" id="last_6_amount"></div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-time" id="last_6_time"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    </t>
+
+
+    <t t-name="test-today">
+
+        <div class="body">
+
+                    <h1 style="text-align:center;">New Test!</h1>
+        </div>
+
+
+    </t>
+</template>

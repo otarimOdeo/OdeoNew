@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template xml:space="preserve">
+
+    <t t-name="retention-deposit">
+
+        <link type="text/css" rel="stylesheet" href="/bare_minimum/static/src/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="/bare_minimum/static/src/css/customView.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <div class="body">
+        <button type="button" id="test1">view 1!</button>
+        <button type="button" class="btn2">view 2</button>
+        <button type="button">view 3!</button>
+        <button type="button">view 4</button>
+        <button type="button">view 5!</button>
+
+            <div class="container">
+            <div class="main-content-title main-content-title-center">
+                <h1>Retention - Deposits</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="content-block">
+                        <div class="left-content-info left-content-info-green">
+
+                            <div class="left-content-info-remain-to-goal d-flex align-items-center flex-wrap">
+                                <div class="left-content-info-icon"></div>
+                                <div class="left-content-info-text">
+                                    <div class="left-content-info-name">
+                                        Daily projection
+                                    </div>
+                                    <div class="left-content-info-value">
+                                        $ 136k
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="left-content-deposit-grey">
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <div class="content-title-blue">Daily progress</div>
+                                <div class="left-content-deposit-value">$ 68 638</div>
+                            </div>
+                            <div class="left-content-deposit-bar">
+                                <span class="left-content-deposit-bar-start-value">0</span>
+                                <div class="left-content-deposit-bar-container">
+                                    <div class="left-content-deposit-percent" style="width: 70%;"></div>
+                                </div>
+                                <span class="left-content-deposit-bar-end-value">100k</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-block">
+                        <div class="left-content-info left-content-info-green">
+
+                            <div class="left-content-info-remain-to-goal d-flex align-items-center flex-wrap">
+                                <div class="left-content-info-icon"></div>
+                                <div class="left-content-info-text">
+                                    <div class="left-content-info-name">
+                                        Weekly projection
+                                    </div>
+                                    <div class="left-content-info-value">
+                                        $ 224k
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="left-content-deposit-grey">
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <div class="content-title-blue">Weekly progress</div>
+                                <div class="left-content-deposit-value">$ 228k</div>
+                            </div>
+                            <div class="left-content-deposit-bar">
+                                <span class="left-content-deposit-bar-start-value">0</span>
+                                <div class="left-content-deposit-bar-container">
+                                    <div class="left-content-deposit-percent" style="width: 40%;"></div>
+                                </div>
+                                <span class="left-content-deposit-bar-end-value">700k</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-block">
+                        <div class="left-content-info left-content-info-green">
+
+                            <div class="left-content-info-remain-to-goal d-flex align-items-center flex-wrap">
+                                <div class="left-content-info-icon"></div>
+                                <div class="left-content-info-text">
+                                    <div class="left-content-info-name">
+                                        Monthly projection
+                                    </div>
+                                    <div class="left-content-info-value">
+                                        $ 2.35m
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="left-content-deposit-grey">
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <div class="content-title-blue">Monthly progress</div>
+                                <div class="left-content-deposit-value">$ 1.92m</div>
+                            </div>
+                            <div class="left-content-deposit-bar">
+                                <span class="left-content-deposit-bar-start-value">0</span>
+                                <div class="left-content-deposit-bar-container">
+                                    <div class="left-content-deposit-percent" style="width: 80%;"></div>
+                                </div>
+                                <span class="left-content-deposit-bar-end-value">2.8mk</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="content-block">
+                        <div class="content-title">Leaders Today</div>
+                        <div class="table retention-deposit-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Place</th>
+                                        <th>Agent name</th>
+                                        <th>Team</th>
+                                        <th>Deposit $</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span>1</span><span class="icon-1"></span></td>
+                                        <td>MikeD</td>
+                                        <td>Ret. ENG</td>
+                                        <td>25688</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>2</span><span class="icon-2"></span></td>
+                                        <td>DonK</td>
+                                        <td>Ret. GER</td>
+                                        <td>21688</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>3</span><span class="icon-3"></span></td>
+                                        <td>MariaS</td>
+                                        <td>Ret. ENG</td>
+                                        <td>14666</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>4</span></td>
+                                        <td>RobertV</td>
+                                        <td>Ret. ENG</td>
+                                        <td>9344</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>5</span></td>
+                                        <td>HonsA</td>
+                                        <td>Ret. GER</td>
+                                        <td>5545</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-block">
+                        <div class="content-title">Weekly Leaders</div>
+                        <div class="table retention-deposit-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Place</th>
+                                        <th>Agent name</th>
+                                        <th>Team</th>
+                                        <th>Deposit $</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span>1</span><span class="icon-1"></span></td>
+                                        <td>MikeD</td>
+                                        <td>Ret. ENG</td>
+                                        <td>25688</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>2</span><span class="icon-2"></span></td>
+                                        <td>DonK</td>
+                                        <td>Ret. GER</td>
+                                        <td>21688</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>3</span><span class="icon-3"></span></td>
+                                        <td>MariaS</td>
+                                        <td>Ret. ENG</td>
+                                        <td>14666</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>4</span></td>
+                                        <td>RobertV</td>
+                                        <td>Ret. ENG</td>
+                                        <td>9344</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>5</span></td>
+                                        <td>HonsA</td>
+                                        <td>Ret. GER</td>
+                                        <td>5545</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-block">
+                        <div class="content-title">Monthly Leaders</div>
+                        <div class="table retention-deposit-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Place</th>
+                                        <th>Agent name</th>
+                                        <th>Team</th>
+                                        <th>Deposit $</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span>1</span><span class="icon-1"></span></td>
+                                        <td>MikeD</td>
+                                        <td>Ret. ENG</td>
+                                        <td>25688</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>2</span><span class="icon-2"></span></td>
+                                        <td>DonK</td>
+                                        <td>Ret. GER</td>
+                                        <td>21688</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>3</span><span class="icon-3"></span></td>
+                                        <td>MariaS</td>
+                                        <td>Ret. ENG</td>
+                                        <td>14666</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>4</span></td>
+                                        <td>RobertV</td>
+                                        <td>Ret. ENG</td>
+                                        <td>9344</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>5</span></td>
+                                        <td>HonsA</td>
+                                        <td>Ret. GER</td>
+                                        <td>5545</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </t>
+
+</template>
