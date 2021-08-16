@@ -309,14 +309,14 @@ odoo.define('bare_minimum.new', function(require) {
         start: function() {
 
 
-//            time_remain()
+            time_remain()
 
             setInterval(function() {
 
 
 
 
-//                foo()
+                foo()
 
             }, 5000);
         },
