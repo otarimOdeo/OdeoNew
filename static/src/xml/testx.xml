@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template  id="main_template" xml:space="preserve">
+
+    <t t-name="testx">
+
+
+
+        <link type="text/css" rel="stylesheet" href="/bare_minimum/static/src/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="/bare_minimum/static/src/css/customView.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <div class="body">
+
+
+
+            <div id="myModal" class="modal"  >
+              <!-- Modal content -->
+                <div class="modal-content" style="width: 40%; height:20%">
+                <span class="close">X</span>
+                    <h1 style="text-align:center;" >New Transaction!</h1>
+                    <div class="pyro">
+                <div class="before"></div>
+                        <div class="after"></div>
+            </div>
+            </div>
+            </div>
+
+
+
+            <div class="container">
+            <div class="main-content-title main-content-title-center">
+                <h1>Score Board</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="content-block">
+                        <div class="left-content-info left-content-info-green">
+                            <div class="left-content-info-remain-to-goal d-flex align-items-center flex-wrap">
+                                <div class="left-content-info-icon"></div>
+                                <div class="left-content-info-text">
+                                    <div class="left-content-info-name" >
+                                        Daily projection
+                                    </div>
+                                    <div class="left-content-info-value" id="d_calc_id1">
+                                        $ 136k
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="left-content-deposit-grey">
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <div class="content-title-blue">Daily progress</div>
+                                <div class="left-content-deposit-value" id="d_calc_id2">$ 68 638</div>
+                            </div>
+                            <div class="left-content-deposit-bar">
+                                <span class="left-content-deposit-bar-start-value">0</span>
+                                <div class="left-content-deposit-bar-container">
+
+                                    <div class="left-content-deposit-percent" id="days_style" ></div>
+                                </div>
+                                <span class="left-content-deposit-bar-end-value">100k</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-block">
+                        <div class="left-content-info left-content-info-green">
+
+                            <div class="left-content-info-remain-to-goal d-flex align-items-center flex-wrap">
+                                <div class="left-content-info-icon"></div>
+                                <div class="left-content-info-text">
+                                    <div class="left-content-info-name">
+                                        Weekly projection
+                                    </div>
+                                    <div class="left-content-info-value " id="w_calc_id1">
+                                        $ 224k
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="left-content-deposit-grey">
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <div class="content-title-blue">Weekly progress</div>
+                                <div class="left-content-deposit-value" id="w_calc_id2">$ 228k</div>
+                            </div>
+                            <div class="left-content-deposit-bar">
+                                <span class="left-content-deposit-bar-start-value">0</span>
+                                <div class="left-content-deposit-bar-container">
+                                    <div class="left-content-deposit-percent" id="weeks_style"></div>
+                                </div>
+                                <span class="left-content-deposit-bar-end-value" >700k</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-block">
+                        <div class="left-content-info left-content-info-green">
+
+                            <div class="left-content-info-remain-to-goal d-flex align-items-center flex-wrap">
+                                <div class="left-content-info-icon"></div>
+                                <div class="left-content-info-text">
+                                    <div class="left-content-info-name">
+                                        Monthly projection
+                                    </div>
+                                    <div class="left-content-info-value" id="m_calc_id1">
+                                        $199
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="left-content-deposit-grey">
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <div class="content-title-blue">Monthly progress</div>
+                                <div class="left-content-deposit-value" id="m_calc_id2">$ 1.92m</div>
+                            </div>
+                            <div class="left-content-deposit-bar">
+                                <span class="left-content-deposit-bar-start-value">0</span>
+                                <div class="left-content-deposit-bar-container">
+                                    <div class="left-content-deposit-percent" id="months_style"></div>
+                                </div>
+                                <span class="left-content-deposit-bar-end-value" id="months_style">2.8mk</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="content-block">
+                        <div class="content-title">Leaders Today</div>
+                        <div class="table retention-deposit-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Place</th>
+                                        <th>Agent name</th>
+                                        <th>Team</th>
+                                        <th>Deposit $</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span>1</span><span class="icon-1"></span></td>
+                                        <td id="days_first_placer_name"></td>
+                                        <td id="days_first_placer_team"></td>
+                                        <td id="days_first_placer_depo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>2</span><span class="icon-2"></span></td>
+                                        <td id="days_second_placer_name"></td>
+                                        <td id="days_second_placer_team"></td>
+                                        <td id="days_second_placer_depo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>3</span><span class="icon-3"></span></td>
+                                        <td id="days_third_placer_name"></td>
+                                        <td id="days_third_placer_team"></td>
+                                        <td id="days_third_placer_depo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>4</span></td>
+
+                                        <td id="days_fourth_placer_name"></td>
+                                        <td id="days_fourth_placer_team"></td>
+                                        <td id="days_fourth_placer_depo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>5</span></td>
+                                        <td id="days_fifth_placer_name"></td>
+                                        <td id="days_fifth_placer_team"></td>
+                                        <td id="days_fifth_placer_depo"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-block">
+                        <div class="content-title">Weekly Leaders</div>
+                        <div class="table retention-deposit-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Place</th>
+                                        <th>Agent name</th>
+                                        <th>Team</th>
+                                        <th>Deposit $</th>
+                                    </tr>
+                                </thead>
+                               <tbody>
+                                    <tr>
+                                        <td><span>1</span><span class="icon-1"></span></td>
+                                        <td id="weeks_first_placer_name"></td>
+                                        <td id="weeks_first_placer_team"></td>
+                                        <td id="weeks_first_placer_depo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>2</span><span class="icon-2"></span></td>
+                                        <td id="weeks_second_placer_name"></td>
+                                        <td id="weeks_second_placer_team"></td>
+                                        <td id="weeks_second_placer_depo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>3</span><span class="icon-3"></span></td>
+                                        <td id="weeks_third_placer_name"></td>
+                                        <td id="weeks_third_placer_team"></td>
+                                        <td id="weeks_third_placer_depo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>4</span></td>
+
+                                        <td id="weeks_fourth_placer_name"></td>
+                                        <td id="weeks_fourth_placer_team"></td>
+                                        <td id="weeks_fourth_placer_depo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>5</span></td>
+                                        <td id="weeks_fifth_placer_name"></td>
+                                        <td id="weeks_fifth_placer_team"></td>
+                                        <td id="weeks_fifth_placer_depo"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-block">
+                        <div class="content-title">Monthly Leaders</div>
+                        <div class="table retention-deposit-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Place</th>
+                                        <th>Agent name</th>
+                                        <th>Team</th>
+                                        <th>Deposit $</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span>1</span><span class="icon-1"></span></td>
+                                        <td id="months_first_placer_name"></td>
+                                        <td id="months_first_placer_team"></td>
+                                        <td id="months_first_placer_depo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>2</span><span class="icon-2"></span></td>
+                                        <td id="months_second_placer_name"></td>
+                                        <td id="months_second_placer_team"></td>
+                                        <td id="months_second_placer_depo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>3</span><span class="icon-3"></span></td>
+                                        <td id="months_third_placer_name"></td>
+                                        <td id="months_third_placer_team"></td>
+                                        <td id="months_third_placer_depo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>4</span></td>
+
+                                        <td id="months_fourth_placer_name"></td>
+                                        <td id="months_fourth_placer_team"></td>
+                                        <td id="months_fourth_placer_depo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>5</span></td>
+                                        <td id="months_fifth_placer_name"></td>
+                                        <td id="months_fifth_placer_team"></td>
+                                        <td id="months_fifth_placer_depo"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<script>
+
+    var modal = document.getElementById("myModal");
+
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+</script>
+
+    </div>
+    </t>
+
+</template>

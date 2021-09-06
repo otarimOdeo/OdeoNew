@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+    <record id='library_book_action' model='ir.actions.client'>
+        <field name="name">Library Books</field>
+        <field name="tag">bare_minimum</field>
+        <field name="target">main</field>
+    </record>
+
+
+
+    <menuitem name="My Library" id="library_base_menu" action="library_book_action"/>
+<!--    <menuitem name="Books" id="library_book_menu" parent="library_base_menu" action="library_book_action"/>-->
+
+
+</odoo>
+

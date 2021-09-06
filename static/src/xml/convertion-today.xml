@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template xml:space="preserve">
+
+    <t t-name="convertion-today">
+
+        <link type="text/css" rel="stylesheet" href="/bare_minimum/static/src/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="/bare_minimum/static/src/css/customView.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <button type="button">view 1!</button>
+        <button type="button">view 2</button>
+        <button type="button">view 3!</button>
+        <button type="button">view 4</button>
+        <button type="button">view 5!</button>
+
+        <div class="body">
+            <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-md-9">
+                    <div class="main-content">
+                        <div class="main-content-title">
+                            <h1>Conversion - Today</h1>
+                        </div>
+                        <div class="content-block main-content-block">
+                            <div class="content-title">Our leaders</div>
+                            <div class="main-content-table">
+                                <table class="w-100">
+                                    <tr class="main-content-table-1">
+                                        <td>
+                                            <div class="main-content-table-icon"></div>
+                                        </td>
+                                        <td>
+                                            <div class="main-content-table-name"><span>MikeD</span><span>$ 28503</span>
+                                            </div>
+                                        </td>
+                                        <td class="w-100">
+                                            <div class="main-content-table-bar">
+                                                <div class="main-content-table-bar-percent" style="width: 80%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="main-content-table-2">
+                                        <td>
+                                            <div class="main-content-table-icon"></div>
+                                        </td>
+                                        <td>
+                                            <div class="main-content-table-name"><span>DanK</span><span>$ 18654</span>
+                                            </div>
+                                        </td>
+                                        <td class="w-100">
+                                            <div class="main-content-table-bar">
+                                                <div class="main-content-table-bar-percent" style="width: 50%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="main-content-table-3">
+                                        <td>
+                                            <div class="main-content-table-icon"></div>
+                                        </td>
+                                        <td>
+                                            <div class="main-content-table-name"><span>MariaS</span><span>$ 15442</span>
+                                            </div>
+                                        </td>
+                                        <td class="w-100">
+                                            <div class="main-content-table-bar">
+                                                <div class="main-content-table-bar-percent" style="width: 30%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="content-block main-content-block">
+                            <div class="content-title">Daily performance</div>
+
+
+                            <div>
+                                <canvas id="myChart" width="400" height="126"></canvas>
+                                <script>
+                                var ctx = document.getElementById('myChart');
+                                var myChart = new Chart(ctx, {
+                                    type: 'bar',
+                                    data: {
+                                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'Orange', 'Orange', 'Orange', 'Orange', 'Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'Orange', 'Orange', 'Orange', 'Orange'],
+                                        datasets: [{
+                                            label: '# of Votes',
+                                            data: [12, 19, 3, 5, 2, 3, 30, 10, 14, 17, 12, 19, 3, 5, 2, 3, 30, 10, 14, 17],
+                                            backgroundColor: [
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA'
+                                            ],
+                                            borderColor: [
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA',
+                                                '#6B73CA'
+                                            ],
+                                            borderWidth: 1,
+                                            borderRadius: 200
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true
+                                            }
+                                        }
+                                    }
+                                });
+                                </script>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="left-content">
+                        <div class="left-content-deposit content-block content-block-blue">
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <div class="content-title-blue">FTDs progress</div>
+                                <div class="left-content-deposit-value">39</div>
+                            </div>
+                            <div class="left-content-deposit-bar">
+                                <span class="left-content-deposit-bar-start-value">0</span>
+                                <div class="left-content-deposit-bar-container">
+                                    <div class="left-content-deposit-percent" style="width: 70%;"></div>
+                                </div>
+                                <span class="left-content-deposit-bar-end-value">50</span>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="left-content-block content-block">
+                        <div class="left-content-info">
+                            <div class="left-content-info-remaining-time d-flex align-items-center flex-wrap">
+                                <div class="left-content-info-icon"></div>
+                                <div class="left-content-info-text">
+                                    <div class="left-content-info-name">
+                                        Remaining time
+                                    </div>
+                                    <div class="left-content-info-value">
+                                        02:25:16
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="left-content-info-remain-to-goal d-flex align-items-center flex-wrap">
+                                <div class="left-content-info-icon"></div>
+                                <div class="left-content-info-text">
+                                    <div class="left-content-info-name">
+                                        Remain to goal
+                                    </div>
+                                    <div class="left-content-info-value">
+                                        11
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="left-content-info-projection d-flex align-items-center flex-wrap">
+                                <div class="left-content-info-icon"></div>
+                                <div class="left-content-info-text">
+                                    <div class="left-content-info-name">
+                                        Projection
+                                    </div>
+                                    <div class="left-content-info-value">
+                                        46
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="left-content-info-since-last-deposit d-flex align-items-center flex-wrap">
+                                <div class="left-content-info-icon"></div>
+                                <div class="left-content-info-text">
+                                    <div class="left-content-info-name">
+                                        Since last FTD
+                                    </div>
+                                    <div class="left-content-info-value">
+                                        00:12:45
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="left-content-block content-block">
+                        <div class="content-title">Last FTDs</div>
+                        <div class="left-content-last-deposit-table">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-name">AndrewD</div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-value">$ 1200</div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-time">14:00</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-name">CameronW</div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-value">$ 1230</div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-time">11:20</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-name">RobertD</div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-value">$ 1230</div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-time">14:01</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-name">CodyT</div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-value">$ 200</div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-time">17:00</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-name">LeslieK</div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-value">$ 1600</div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-time">14:40</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-name">DianneR</div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-value">$ 4200</div>
+                                    </td>
+                                    <td>
+                                        <div class="left-content-last-deposit-table-time">12:00</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </t>
+
+</template>

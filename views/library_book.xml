@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="bare_min_1" name="minimum assets" inherit_id="web.assets_backend">
+
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/bare_minimum/static/src/js/retention-today.js"></script>
+                <script type="text/javascript" src="/bare_minimum/static/src/js/testj.js"></script>
+                <script type="text/javascript" src="/bare_minimum/static/src/js/convertion-ftds.js"></script>
+                <script type="text/javascript" src="/bare_minimum/static/src/js/retention-deposit.js"></script>
+                <script type="text/javascript" src="/bare_minimum/static/src/js/popups.js"></script>
+                <script type="text/javascript" src="/bare_minimum/static/src/js/convertion-today.js"></script>
+            </xpath>
+        </template>
+    </data>
+
+
+</odoo>
